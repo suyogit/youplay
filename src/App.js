@@ -1,8 +1,15 @@
 import './App.css';
+import Body from './component/Body';
+import Header from './component/Header';
 function App() {
   return (
-    <div className="text-3xl font-bold bg-green-700">
-      <h1>React App</h1>
+    <div>
+
+      <Header />
+      <Body />
+
+
+
     </div>
   );
 }
