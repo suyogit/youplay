@@ -1,8 +1,11 @@
 import './App.css';
 import Body from './component/Body';
 import Header from './component/Header';
+import { Provider } from 'react-redux';
+import store from './utils/store';
 function App() {
   return (
+    <Provider store={store}>
     <div>
 
       <Header />
@@ -11,6 +14,7 @@ function App() {
 
 
     </div>
+    </Provider>
   );
 }
 export default App;
