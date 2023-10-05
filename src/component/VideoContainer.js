@@ -2,8 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { YOUTUBE_VIDEOS_API } from '../utils/constants'
 import VideoCard from './VideoCard'
-
-
+import { Link } from 'react-router-dom'
 
 const VideoContainer = () => {
 
@@ -15,7 +14,6 @@ const VideoContainer = () => {
 
     }, [])
 
-
     const getVideos = async () => {
         const data = await fetch(YOUTUBE_VIDEOS_API);
         const json = await data.json();
@@ -25,9 +23,10 @@ const VideoContainer = () => {
 
     return (
         <div className='flex flex-wrap'>
-            {videos.map((video,) => {
-                return <VideoCard key={video.id} info={video} />
-            }
+            {videos.map((video) => (
+                <Link to={"/watch?v" + video.id}>
+                    <VideoCard key={video.id} info={video} /></Link>
+            )
             )}
             {/* <VideoCard info={videos[0]} /> */}
         </div>
