@@ -66,7 +66,7 @@ const Header = () => {
         dispatch(toggleMenu())
     }
     return (
-        <div className='grid grid-flow-col p-2 m-2 shadow-lg  '>
+        <div className='grid grid-flow-col p-2 m-2 shadow-lg sticky top-0  mt-0  bg-white'>
             <div className='flex' col-span-1>
                 <img
                     onClick={() => { toggleMenuHandler() }}
@@ -92,12 +92,12 @@ const Header = () => {
 
                 {showSuggestions &&
                     (
-                        <div className="fixed bg-white py-2 px-2  w-[37rem] shadow-lg rounded-lg border border-gray-100 ">
+                    <div className="fixed bg-white py-2 px-2  w-[32rem] shadow-lg rounded-lg border border-gray-100 ">
                             <ul>
                                 {
                                     suggestions.map((s) => (
                                         <li
-                                            key={s} className="py-1 px-3 shadow-sm hover:bg-red-100">
+                                            key={s} className="py-1 px-3 shadow-sm hover:bg-gray-100">
                                             🔍  {s}
                                         </li>
 

@@ -22,7 +22,7 @@ const VideoContainer = () => {
     }
 
     return (
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap '>
 
             {videos[0] && <AdVideoCard info={videos[0]} />}
 
